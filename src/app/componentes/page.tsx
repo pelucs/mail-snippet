@@ -64,7 +64,7 @@ export default function Componentes() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {snippetsFromMap.map(snippet => (
                 <div key={snippet.slug} className="flex flex-col gap-2 group">
-                  <div className="overflow-x-auto scrollbar-custom pb-2">
+                  <div className="h-full overflow-x-auto scrollbar-custom pb-2">
                     <Button
                       asChild
                       className="w-fit h-full p-0 flex items-start bg-[#ebebeb] border-none group-hover:opacity-80 transition-all"

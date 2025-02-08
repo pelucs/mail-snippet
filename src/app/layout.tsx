@@ -4,7 +4,12 @@ import { Toaster } from "@/components/ui/sonner";
 
 import "./globals.css";
 
-const ubuntu = Ubuntu({ variable: "--font-ubuntu", weight: ["300", "400", "500", "700"] });
+const ubuntu = Ubuntu({
+  variable: "--font-ubuntu",
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+});
+
 
 export const metadata: Metadata = {
   title: "MailSnippet",
