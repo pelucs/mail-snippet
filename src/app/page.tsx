@@ -53,7 +53,7 @@ export default function Home() {
               </span>
             </div>
 
-            <div className="w-full h-full bg-zinc-900 p-2 md:p-4">
+            <div className="w-full h-full p-2 md:p-4 bg-zinc-900 overflow-hidden">
               <pre className="text-left">
                 <code className="text-xs md:text-sm text-white font-mono">
                   {codeIllustration}
