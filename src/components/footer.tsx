@@ -8,7 +8,7 @@ import { Separator } from "./ui/separator";
 
 export function Footer() {
   return (
-    <footer className="py-5 md:py-3 px-7 flex flex-col items-center md:flex-row md:justify-between gap-6 border-t text-muted-foreground">
+    <footer className="py-5 md:py-3 px-7 flex flex-col items-center md:flex-row md:justify-between gap-4 md:gap-6 border-t text-muted-foreground">
       <span>
         &copy;2025 - Todos os direitos reservados
       </span>

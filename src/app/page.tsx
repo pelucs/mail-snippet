@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,11 +10,30 @@ import { Footer } from "@/components/footer";
 import { MoveRight } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { codeIllustration } from "@/utils/code-illustration";
+import { Banner } from "@/components/banner";
+import { useEffect, useState } from "react";
+import { Snippets } from "@/types/snippets-types";
+import { snippets } from "@/snippets/snippets";
 
 export default function Home() {
+
+  const [snippetsForHeader, setSnippetsForHeader] = useState<Snippets[]>([]);
+  const [snippetsForFooter, setSnippetsForFooter] = useState<Snippets[]>([]);
+  
+  useEffect(() => {
+    
+    const filteredSnippetsForHeader = snippets.filter(snippet => snippet.category === "header");
+    const filteredSnippetsForFooter = snippets.filter(snippet => snippet.category === "footer");
+
+    setSnippetsForHeader(filteredSnippetsForHeader);
+    setSnippetsForFooter(filteredSnippetsForFooter);
+
+  }, []);
+
   return (
     <main className="container-default">
       <Header/>
+      <Banner/>
 
       {/* Hero */}
       <div className="py-10 md:py-20 pl-5 md:pl-20 md:h-[70vh] flex flex-col md:grid md:grid-cols-2 md:items-center gap-10">
@@ -99,19 +120,45 @@ export default function Home() {
           </div>
 
           <div className="mt-6">
-            <TabsContent value="header" className="grid grid-cols-2 md:grid-cols-4 gap-5">
-              {Array.from({ length: 4 }).map((_, i) => (
-                <Card key={i} className="h-40 py-3 px-4 bg-secondary border-none">
-                  Header
-                </Card>
+            <TabsContent value="header" className="grid grid-cols-1 md:grid-cols-4 gap-5">
+              {snippetsForHeader.map(snippet => (
+                <div key={snippet.slug} className="w-full flex flex-col gap-2 group rounded-md overflow-hidden">
+                  <div className="h-full overflow-x-auto scrollbar-custom pb-2 md:p-0">
+                    <Button
+                      asChild
+                      className="w-fit h-full p-0 flex items-start bg-[#ebebeb] border-none group-hover:opacity-80 transition-all"
+                    >
+                      <Link href={`/componentes/${snippet.category}/${snippet.slug}`} className="flex items-start overflow-hidden">
+                        <div dangerouslySetInnerHTML={{ __html: snippet.reactCode }}/>
+                      </Link>
+                    </Button>
+                  </div>
+
+                  <Link href={`/componentes/${snippet.category}/${snippet.slug}`} className="text-muted-foreground group-hover:text-white transition-all">
+                    {snippet.title}
+                  </Link>
+                </div>
               ))}
             </TabsContent>
 
-            <TabsContent value="footer" className="grid grid-cols-2 md:grid-cols-4 gap-5">
-              {Array.from({ length: 4 }).map((_, i) => (
-                <Card key={i} className="h-40 py-3 px-4 bg-secondary border-none">
-                  Footer
-                </Card>
+            <TabsContent value="footer" className="grid grid-cols-1 md:grid-cols-4 gap-5">
+              {snippetsForFooter.map(snippet => (
+                <div key={snippet.slug} className="w-full flex flex-col gap-2 group rounded-md overflow-hidden">
+                  <div className="h-full overflow-x-auto scrollbar-custom pb-2 md:p-0">
+                    <Button
+                      asChild
+                      className="w-fit h-full p-0 flex items-start bg-[#ebebeb] border-none group-hover:opacity-80 transition-all"
+                    >
+                      <Link href={`/componentes/${snippet.category}/${snippet.slug}`} className="flex items-start overflow-hidden">
+                        <div dangerouslySetInnerHTML={{ __html: snippet.reactCode }}/>
+                      </Link>
+                    </Button>
+                  </div>
+
+                  <Link href={`/componentes/${snippet.category}/${snippet.slug}`} className="text-muted-foreground group-hover:text-white transition-all">
+                    {snippet.title}
+                  </Link>
+                </div>
               ))}
             </TabsContent>
           </div>

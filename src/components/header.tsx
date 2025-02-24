@@ -26,7 +26,7 @@ export function Header() {
         </Link>
 
         <span className="hidden sm:block text-muted-foreground text-xs">
-          Versão 0.1.0
+          Versão 0.0.1
         </span>
       </div>
 

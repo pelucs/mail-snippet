@@ -15,6 +15,7 @@ import {
   DialogTitle, 
   DialogTrigger 
 } from "./ui/dialog";
+import { MenuPopover } from "./menu-popover";
 
 export function SearchDialog() {
 
@@ -48,9 +49,7 @@ export function SearchDialog() {
           </DialogTrigger>
         </Button>
 
-        <Button size="icon" variant="secondary" className="border bg-secondary/70">
-          <Menu className="size-4"/>
-        </Button>
+        <MenuPopover/>
       </div>
 
       <DialogPortal>
