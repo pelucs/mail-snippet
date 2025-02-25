@@ -1,19 +1,17 @@
 "use client"
 
-import Image from "next/image";
 import Link from "next/link";
 
-import { Card } from "@/components/ui/card";
 import { Header } from "@/components/header";
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/footer";
-import { MoveRight } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { codeIllustration } from "@/utils/code-illustration";
 import { Banner } from "@/components/banner";
-import { useEffect, useState } from "react";
 import { Snippets } from "@/types/snippets-types";
 import { snippets } from "@/snippets/snippets";
+import { MoveRight } from "lucide-react";
+import { codeIllustration } from "@/utils/code-illustration";
+import { useEffect, useState } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Home() {
 
@@ -95,9 +93,8 @@ export default function Home() {
           </h1>
 
           <p className="max-w-lg text-muted-foreground">
-            Mais de 500 exemplos de componentes projetados profissionalmente, 
-            totalmente responsivos e habilmente elaborados que você pode inserir 
-            em seus projetos Tailwind e personalizar como quiser.
+            Crie e-mails incríveis em menos tempo! Nossos componentes prontos garantem praticidade, personalização fácil e um design profissional
+            para suas campanhas.
           </p>
         </div>
 

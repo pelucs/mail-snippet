@@ -10,10 +10,10 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { snippets } from "@/snippets/snippets";
 import { Separator } from "@/components/ui/separator";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { CodeBlock } from "@/components/code-block";
 import { PreviewBlock } from "@/components/preview-block";
-import { Check, ChevronRight, ClipboardList } from "lucide-react";
+import { Check, ChevronRight, ClipboardList, MoveLeft } from "lucide-react";
 
 export default function Snippet() {
   
@@ -24,8 +24,19 @@ export default function Snippet() {
 
   const snippet = snippets.find(item => item.slug === snippetSlug);
 
+  const navigation = useRouter();
+
   if (!snippet) {
-    return <p>Snippet não encontrado.</p>;
+    return(
+      <div className="h-screen flex items-center flex-col justify-center gap-4">
+        <p className="text-xl">Snippet não encontrado.</p>
+        <Button onClick={() => navigation.back()}>
+          <MoveLeft className="size-4"/>
+          
+          Voltar
+        </Button>
+      </div>
+    );
   }
 
   return(

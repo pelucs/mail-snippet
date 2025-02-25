@@ -48,7 +48,7 @@
   @apply w-2 bg-secondary;
 }
 .container-default {
-  @apply lg:container min-h-screen m-auto lg:border-x;
+  @apply lg:container min-h-screen m-auto lg:border-x border-dashed;
 }
 .scrollbar-custom::-webkit-scrollbar {
   @apply h-1.5;

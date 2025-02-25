@@ -27,7 +27,7 @@ export function CodeBlock({ snippet }: PreviewBlockProps) {
 
       <div>
         <pre className="p-3 text-left h-full overflow-y-auto scrollbar-custom pb-2">
-          <code className="text-sm language-html">
+          <code className="text-sm language-html bg-transparent">
             {snippet.htmlCode}
           </code>
         </pre>

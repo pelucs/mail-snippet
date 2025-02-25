@@ -9,7 +9,7 @@ import { FeedbackPopover } from "./feedback-popover";
 
 export function Header() {
   return (
-    <header className="w-full h-14 px-5 md:px-7 flex items-center justify-between gap-2 sm:gap-0 border-b sticky top-0 bg-background z-50">
+    <header className="w-full h-14 px-5 md:px-7 flex items-center justify-between gap-2 sm:gap-0 border-b border-dashed sticky top-0 bg-background/50 z-50 backdrop-blur-sm">
       <div className="flex items-center gap-4">
         <Link href="/" className="flex items-center gap-2">
           <Image 
