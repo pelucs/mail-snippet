@@ -63,12 +63,12 @@ export default function Snippet() {
 
             <ChevronRight className="size-4"/>
 
-            <span className="capitalize text-zinc-100">
+            <span className="text-zinc-100">
               {snippet.title}
             </span>
           </div>
 
-          <h1 className="capitalize text-2xl font-bold">
+          <h1 className="text-2xl font-bold">
             {snippet.title}
           </h1>
         </div>
