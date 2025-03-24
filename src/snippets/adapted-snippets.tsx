@@ -40,11 +40,11 @@ export const adaptedSnippets = [
     max-width: 100%; vertical-align: top; background-size: 100% 100%;"
 >
     <!--[if gte mso 9]>
-    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:228px; height:361px;">
+    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:{VALOR EM pt}; height:{VALOR EM pt};">
     <v:fill type="tile" src="LINK DA SUA IMAGEM" color="#4AB969"/>
     <v:textbox inset="0,0,0,0">
     <![endif]-->
-    OLÁ
+      ...
     <!--[if gte mso 9]>
     </v:textbox>
     </v:rect>

@@ -53,7 +53,7 @@ export default function Componentes() {
             key={category} 
             className="space-y-2"
           >
-            <h1 className="text-xl capitalize flex items-center gap-2">
+            <h1 className="text-xl font-medium capitalize flex items-center gap-2">
               {category}
 
               <span className="py-px px-2 text-xs bg-gradient-to-tr to-blue-500 from-pink-500 rounded-full animate-bounce">
