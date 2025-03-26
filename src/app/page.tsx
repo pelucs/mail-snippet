@@ -116,8 +116,8 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="mt-6">
-            <TabsContent value="header" className="grid grid-cols-1 md:grid-cols-4 gap-5">
+          <div className="mt-6 relative">
+            <TabsContent value="header" className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {snippetsForHeader.map(snippet => (
                 <div key={snippet.slug} className="w-full flex flex-col gap-2 group rounded-md overflow-hidden">
                   <div className="h-full overflow-x-auto scrollbar-custom pb-2 md:p-0">
@@ -138,8 +138,8 @@ export default function Home() {
               ))}
             </TabsContent>
 
-            <TabsContent value="footer" className="grid grid-cols-1 md:grid-cols-4 gap-5">
-              {snippetsForFooter.map(snippet => (
+            <TabsContent value="footer" className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {snippetsForFooter.slice(0, 2).map(snippet => (
                 <div key={snippet.slug} className="w-full flex flex-col gap-2 group rounded-md overflow-hidden">
                   <div className="h-full overflow-x-auto scrollbar-custom pb-2 md:p-0">
                     <Button
@@ -158,9 +158,20 @@ export default function Home() {
                 </div>
               ))}
             </TabsContent>
+
+            {/* Gradiente de ocultação com efeito de suspense */}
+            <div className="absolute bottom-0 left-0 w-full h-32 pb-12 bg-gradient-to-t from-background via-background/80 to-transparent 
+            flex items-end justify-center">
+              <Button>
+                <Link href="/componentes">
+                  Ver mais
+                </Link>
+              </Button>
+            </div>
           </div>
         </Tabs>
       </div>
+
 
       <Footer/>
     </main>

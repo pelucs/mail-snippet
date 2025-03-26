@@ -22,7 +22,7 @@ export function FeedbackPopover() {
         <Textarea placeholder="Deixe sua mensagem" className="h-28 resize-none"/>
 
         <div className="flex gap-2">
-          <Button className="flex-1">
+          <Button className="flex-1" disabled>
             Enviar Feedback
           </Button>
           

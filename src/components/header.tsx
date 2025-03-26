@@ -44,10 +44,6 @@ export function Header() {
             <Link href="/componentes">Componentes</Link>
           </Button>
 
-          <Button asChild variant="ghost">
-            <Link href="/components">Sobre nós</Link>
-          </Button>
-
           <FeedbackPopover/>
         </nav>
 
