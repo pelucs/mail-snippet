@@ -137,11 +137,6 @@ export const snippets = [
     htmlCode: `<tr>
   <td style="padding: 26px 0px;" class="stylingblock-content-wrapper camarker-inner">
     <center>
-      <span style="color:#064cc0;"><b>
-          <span style="font-size:17px;">Agradecemos por escolher o Credcesta!</span>
-        </b></span>
-      <br>
-      &nbsp;
       <table>
         <tbody>
           <tr>
